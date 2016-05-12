@@ -1,0 +1,377 @@
+Recette ou dépense,Fonctionnement ou Investissement,1 nom,2 sous catégories,3 sous sous catégorie,,montant,année
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,14,2009
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,0,2009
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2009
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,200,2009
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,0,2009
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,166,2009
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,447,2009
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,0,2009
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,178,2009
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,19,2009
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,0,2009
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,0,2009
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2009
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,93,2009
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,27,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,126,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,117,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,38,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,36,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,89,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,140,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,15,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,20,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,0,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,29,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,186,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,79,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,53,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,20,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,4,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,8,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,66,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,33,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,0,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,0,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2009
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,23,2009
+D,F,Frais Financier,,,,19,2009
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,26,2009
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,186,2009
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,96,2009
+R,I,Recettes d'investissement hors dette :,FCTVA,,,16,2009
+R,I,Recettes d'investissement hors dette :,DDEC,,,6,2009
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2009
+R,I,Recettes d'investissement hors dette :,Cessions,,,2,2009
+R,I,Recettes d'investissement hors dette :,Divers,,,21,2009
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,17,2010
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,0,2010
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2010
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,207,2010
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,0,2010
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,130,2010
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,490,2010
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,0,2010
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,189,2010
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,22,2010
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,0,2010
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,0,2010
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2010
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,95,2010
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,31,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,133,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,119,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,48,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,35,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,87,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,140,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,16,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,20,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,1,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,27,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,188,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,81,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,53,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,21,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,6,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,7,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,61,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,32,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,0,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,0,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2010
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,29,2010
+D,F,Frais Financier,,,,17,2010
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,29,2010
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,185,2010
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,90,2010
+R,I,Recettes d'investissement hors dette :,FCTVA,,,23,2010
+R,I,Recettes d'investissement hors dette :,DDEC,,,5,2010
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2010
+R,I,Recettes d'investissement hors dette :,Cessions,,,4,2010
+R,I,Recettes d'investissement hors dette :,Divers,,,20,2010
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,16,2011
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,20,2011
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2011
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,208,2011
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,22,2011
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,183,2011
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,227,2011
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,160,2011
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,249,2011
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,23,2011
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,0,2011
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,0,2011
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2011
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,97,2011
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,32,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,156,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,127,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,48,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,36,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,96,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,141,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,16,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,21,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,1,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,25,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,196,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,82,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,53,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,21,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,6,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,8,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,56,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,34,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,0,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,0,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2011
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,20,2011
+D,F,Frais Financier,,,,17,2011
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,31,2011
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,171,2011
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,100,2011
+R,I,Recettes d'investissement hors dette :,FCTVA,,,20,2011
+R,I,Recettes d'investissement hors dette :,DDEC,,,5,2011
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2011
+R,I,Recettes d'investissement hors dette :,Cessions,,,2,2011
+R,I,Recettes d'investissement hors dette :,Divers,,,22,2011
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,15,2012
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,28,2012
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2012
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,210,2012
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,21,2012
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,209,2012
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,245,2012
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,161,2012
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,251,2012
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,26,2012
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,0,2012
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,9,2012
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2012
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,96,2012
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,32,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,160,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,135,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,59,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,40,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,98,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,145,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,17,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,22,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,1,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,23,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,199,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,84,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,56,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,21,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,7,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,8,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,56,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,34,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,17,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,0,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2012
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,19,2012
+D,F,Frais Financier,,,,18,2012
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,44,2012
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,171,2012
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,114,2012
+R,I,Recettes d'investissement hors dette :,FCTVA,,,19,2012
+R,I,Recettes d'investissement hors dette :,DDEC,,,5,2012
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2012
+R,I,Recettes d'investissement hors dette :,Cessions,,,6,2012
+R,I,Recettes d'investissement hors dette :,Divers,,,16,2012
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,13,2013
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,29,2013
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2013
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,209,2013
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,22,2013
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,223,2013
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,261,2013
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,163,2013
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,254,2013
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,27,2013
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,0,2013
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,8,2013
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2013
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,99,2013
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,32,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,166,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,136,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,65,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,46,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,105,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,150,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,16,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,23,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,1,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,24,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,203,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,86,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,59,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,23,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,7,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,8,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,55,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,28,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,21,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,0,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2013
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,21,2013
+D,F,Frais Financier,,,,20,2013
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,37,2013
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,181,2013
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,100,2013
+R,I,Recettes d'investissement hors dette :,FCTVA,,,19,2013
+R,I,Recettes d'investissement hors dette :,DDEC,,,5,2013
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2013
+R,I,Recettes d'investissement hors dette :,Cessions,,,10,2013
+R,I,Recettes d'investissement hors dette :,Divers,,,15,2013
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,12,2014
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,29,2014
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2014
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,199,2014
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,22,2014
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,226,2014
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,273,2014
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,176,2014
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,257,2014
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,25,2014
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,5,2014
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,3,2014
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2014
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,108,2014
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,30,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,191,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,138,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,68,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,46,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,114,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,153,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,15,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,23,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,0,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,20,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,205,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,86,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,62,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,23,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,7,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,8,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,49,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,28,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,8,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,3,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2014
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,16,2014
+D,F,Frais Financier,,,,18,2014
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,40,2014
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,153,2014
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,86,2014
+R,I,Recettes d'investissement hors dette :,FCTVA,,,19,2014
+R,I,Recettes d'investissement hors dette :,DDEC,,,25,2014
+R,I,Recettes d'investissement hors dette :,DGE,,,0,2014
+R,I,Recettes d'investissement hors dette :,Cessions,,,2,2014
+R,I,Recettes d'investissement hors dette :,Divers,,,1,2014
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,12,2015
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,27,2015
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2015
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,174,2015
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,22,2015
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,247,2015
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,294,2015
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,171,2015
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,269,2015
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,30,2015
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,17,2015
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,7,2015
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,0,2015
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,109,2015
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,38,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,210,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,138,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,73,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,44,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,117,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,156,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,15,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,24,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,0,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,19,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,210,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,87,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,67,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,23,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,7,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,8,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,49,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,29,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,11,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,0,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,3,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2015
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,16,2015
+D,F,Frais Financier,,,,18,2015
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,44,2015
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,155,2015
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,65,2015
+R,I,Recettes d'investissement hors dette :,FCTVA,,,19,2015
+R,I,Recettes d'investissement hors dette :,DDEC,,,5,2015
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2015
+R,I,Recettes d'investissement hors dette :,Cessions,,,6,2015
+R,I,Recettes d'investissement hors dette :,Divers,,,13,2015
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,Compensations fiscales,,9,2016
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DCRTP,,28,2016
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGD,,9,2016
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,DGF,,150,2016
+R,F,Recettes Réelles de Fonctionnement,Dotations et compensations,FNGIR,,22,2016
+R,F,Recettes Réelles de Fonctionnement,DMTO,,,273,2016
+R,F,Recettes Réelles de Fonctionnement,Foncier bâti,,,325,2016
+R,F,Recettes Réelles de Fonctionnement,"CVAE, IFER",,,177,2016
+R,F,Recettes Réelles de Fonctionnement,"TSCA, TICPE",,,265,2016
+R,F,Recettes Réelles de Fonctionnement,Autres fiscalités,,,29,2016
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,DCP,,18,2016
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds péréquation DMTO,,8,2016
+R,F,Recettes Réelles de Fonctionnement,Fonds de péréquation,Fonds solidarité DMTO,,8,2016
+R,F,Recettes Réelles de Fonctionnement,Recettes sociales,,,109,2016
+R,F,Recettes Réelles de Fonctionnement,Recettes diverses,,,37,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,RMI ou RSA allocations,,226,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,APA,,137,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,PCH / ACTP,,79,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PA,,44,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement PH,,122,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Hébergement enfants,,158,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS 657*,,14,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Prévention enfants,,25,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,Divers enfants,,1,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Action sociale,DGAS divers,,19,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dépenses de Personnel,,,212,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,SDIS,,,88,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,DTT,,,63,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Dotations Collèges,,,23,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,FSL,,,7,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Prévention spécialisée,,,7,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres frais généraux (011) ,,,46,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,657 - Subventions,,,28,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement au titre du fonds de péréquation des DMTO,,27,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Prélèvement solidarité DMTO,,6,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Versement aux Fonds de péréquation,Reversement au fonds de péréquation CVAE,,0,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Reversement au fonds de péréquation DMTO,,,,2016
+D,F,Dépenses Réelles de Fonctionnement hors frais financiers,Autres charges,,,16,2016
+D,F,Frais Financier,,,,17,2016
+D,I,Remboursement emprunt,Remboursement Emprunt ,,,45,2016
+D,I,Dépenses d'investissement hors dette :,Maîtrise d'ouvrage,,,151,2016
+D,I,Dépenses d'investissement hors dette :,Subventions d'investissement,,,64,2016
+R,I,Recettes d'investissement hors dette :,FCTVA,,,19,2016
+R,I,Recettes d'investissement hors dette :,DDEC,,,5,2016
+R,I,Recettes d'investissement hors dette :,DGE,,,1,2016
+R,I,Recettes d'investissement hors dette :,Cessions,,,8,2016
+R,I,Recettes d'investissement hors dette :,Divers,,,11,2016

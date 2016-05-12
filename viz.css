@@ -1,0 +1,39 @@
+.years{
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.years button{
+    border: 0;
+    background-color: burlywood;
+    font-size: 1.5em;
+    padding: 0.8em;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+
+.budget-nav{
+    
+}
+
+.budget-nav rect{
+    fill: white;
+}
+
+.budget-nav > rect,
+.budget-nav .portion rect
+{
+    stroke-width: 2px;
+    stroke: burlywood; 
+}
+
