@@ -85,18 +85,20 @@
             portion.appendChild(rect);
             portion.appendChild(text);
 
-            portion.addEventListener('click', function(){
-                onPortionClick({
-                    label: label,
-                    rect: rect
+            if(typeof onPortionClick === 'function'){
+                portion.addEventListener('click', function(){
+                    onPortionClick({
+                        label: label,
+                        rect: rect
+                    });
+
+                    if(trapezoid)
+                        trapezoid.remove();
+
+                    trapezoid = createZoomingTrapezoid(xShift, BAR_HEIGHT, BAR_HEIGHT, portionWidth, width);
+                    stackBar.appendChild(trapezoid);
                 });
-                
-                if(trapezoid)
-                    trapezoid.remove();
-                
-                trapezoid = createZoomingTrapezoid(xShift, BAR_HEIGHT, BAR_HEIGHT, portionWidth, width);
-                stackBar.appendChild(trapezoid);
-            });
+            }
             
             stackBar.appendChild(portion);
 

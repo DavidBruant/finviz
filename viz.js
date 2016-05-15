@@ -27,6 +27,53 @@ var primitifByYearP = primitifP
 //.then(data => console.log('data byYear', data))
 .catch(err => console.error('err', err))
 
+var WIDTH = 700;
+var HEIGHT = 70;
+var svgxmlns = "http://www.w3.org/2000/svg";
+
+function makeRecursiveStackBarWithData({data, groupFunction, title, next}, container){
+    var byGroup = _.groupBy(data, groupFunction);
+    var totalByGroup = Object.create(null);
+    
+    Object.keys(byGroup).forEach(function(k){
+        var val = byGroup[k]
+        totalByGroup[k] = val.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
+    });
+    
+    var nextStackBar;
+    var g = document.createElementNS(svgxmlns, "g");
+    var stackBar = makeStackBar([...Object.entries(byGroup)].map(([group, rows]) => {
+        console.log('group, rows', group, rows)
+        
+        return {
+            label: group,
+            value: totalByGroup[group],
+            onPortionClick: next ? function(ev){
+                var type = ev.label;
+                var rect = ev.rect;
+                
+                if(nextStackBar)
+                    nextStackBar.remove();
+                
+                nextStackBar = makeRecursiveStackBarWithData({
+                    data: rows,
+                    title: group,
+                    groupFunction: next.groupFunction,
+                    next: next.next
+                }, g);
+                nextStackBar.setAttribute('transform', 'translate(0, '+2*HEIGHT+')')
+                
+                g.appendChild(nextStackBar)
+            } : undefined
+        }
+    }), {width: WIDTH, height: HEIGHT, title: title})
+    
+    g.appendChild(stackBar);
+    
+    return g;
+}
+
+
 
 primitifByYearP
 .then(function(byYear){
@@ -51,78 +98,28 @@ primitifByYearP
 
     var yearRows = byYear[year];
 
-    console.log('2010', yearRows);
-    var total = yearRows.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
-    
-    var byType = _.groupBy(
-        yearRows, 
-        r => r['Fonctionnement ou Investissement'] + r['Recette ou dépense']
-    );
-    var totalByType = Object.create(null);
-    
-    Object.keys(byType).forEach(function(k){
-        var val = byType[k]
-        totalByType[k] = val.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
-    })
-
-    var svgxmlns = "http://www.w3.org/2000/svg";
     var svgElem = document.createElementNS(svgxmlns, "svg");
     svgElem.setAttribute('width', 1000);
     svgElem.setAttribute('height', 700);
     svgElem.classList.add('budget-nav');
 
-    var width = 700;
-    var height = 70;
-    
-    var budgetCategories1 = makeStackBar([...Object.entries(byType)].map(([type, rows]) => {
-        console.log('type, rows', type, rows)
-        
-        return {
-            label: type,
-            value: totalByType[type],
-            onPortionClick: function(ev){
-                var type = ev.label;
-                var rect = ev.rect;
-                
-                console.log('click', type, rect, rows)
-                
-                if(budgetCategories2)
-                    budgetCategories2.remove();
-                
-                var by1Nom = _.groupBy(
-                    rows, 
-                    r => r['1 nom']
-                );
-                var totalBy1Nom = Object.create(null);
-
-                Object.keys(by1Nom).forEach(function(k){
-                    var val = by1Nom[k]
-                    totalBy1Nom[k] = val.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
-                })
-                
-                budgetCategories2 = makeStackBar([...Object.entries(by1Nom)].map(([_1Nom, rows]) => {
-                    return {
-                        label: _1Nom,
-                        value: totalBy1Nom[_1Nom],
-                        onPortionClick: function(ev){
-                            var _1Nom = ev.label;
-                            var rect = ev.rect;
-
-                            console.log('click', _1Nom, rect, rows)
-                        }
+    var budgetCategories1 = makeRecursiveStackBarWithData(
+        {
+            data: yearRows,
+            title: 'Budget complet',
+            groupFunction: r => r['Fonctionnement ou Investissement'] + r['Recette ou dépense'],
+            next: {
+                groupFunction: r => r['1 nom'],
+                next: {
+                    groupFunction: r => r['2 sous catégories'],
+                    next: {
+                        groupFunction: r => r['3 sous sous catégorie']
                     }
-                }), {width: width, height: height, title: type})
-                
-                budgetCategories2.setAttribute('transform', 'translate(0, '+2*height+')')
-                
-                svgElem.appendChild(budgetCategories2)
+                }
             }
-        }
-    }), {width: width, height: height, title: 'Budget complet'})
-    
-    var budgetCategories2;
-    var budgetCategories3;
-    var budgetCategories4;
+        }, 
+        svgElem
+    );
     
     svgElem.appendChild(budgetCategories1)
     
