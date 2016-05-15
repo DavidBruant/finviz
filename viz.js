@@ -22,22 +22,7 @@ var primitifByYearP = primitifP
 .then(function(prim){
     console.log('prim', prim)
 
-    var byYear = new Map();
-
-    prim.forEach(function(row){
-        var year = row["année"];
-
-        var yearRows = byYear.get(year);
-
-        if(!yearRows){
-            yearRows = [];
-            byYear.set(year, yearRows);
-        }
-
-        yearRows.push(row);
-    });
-
-    return byYear;
+    return _.groupBy(prim, r => r["année"]);
 })
 //.then(data => console.log('data byYear', data))
 .catch(err => console.error('err', err))
@@ -49,7 +34,8 @@ primitifByYearP
     var main = document.body.querySelector('main');
 
     // draw year buttons
-    byYear.forEach(function(value, key){
+    Object.keys(byYear).forEach(function(key){
+        var value = byYear[key];
         var b = document.createElement('button');
         b.textContent = key;
 
@@ -63,27 +49,20 @@ primitifByYearP
     // pick a year
     var year = 2010;
 
-    var yearRows = byYear.get(year);
+    var yearRows = byYear[year];
 
     console.log('2010', yearRows);
     var total = yearRows.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
-
-    var byType = new Map();
-    var totalByType = new Map();
-
-    yearRows.forEach(r => {
-        var type = r['Fonctionnement ou Investissement'] + r['Recette ou dépense'];
-        var typeRows = byType.get(type)
-
-        if(!typeRows){
-            typeRows = [];
-            byType.set(type, typeRows);
-
-            totalByType.set(type, 0);
-        }
-
-        typeRows.push(r);
-        totalByType.set(type, totalByType.get(type)+r['montant']);
+    
+    var byType = _.groupBy(
+        yearRows, 
+        r => r['Fonctionnement ou Investissement'] + r['Recette ou dépense']
+    );
+    var totalByType = Object.create(null);
+    
+    Object.keys(byType).forEach(function(k){
+        var val = byType[k]
+        totalByType[k] = val.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
     })
 
     var svgxmlns = "http://www.w3.org/2000/svg";
@@ -92,54 +71,61 @@ primitifByYearP
     svgElem.setAttribute('height', 700);
     svgElem.classList.add('budget-nav');
 
-    var completeBudget = document.createElementNS(svgxmlns, "rect");
     var width = 700;
     var height = 70;
-    completeBudget.setAttribute('x', 20);
-    completeBudget.setAttribute('y', 0);
-    completeBudget.setAttribute('height', height);
-    completeBudget.setAttribute('width', width);
+    
+    var budgetCategories1 = makeStackBar([...Object.entries(byType)].map(([type, rows]) => {
+        console.log('type, rows', type, rows)
+        
+        return {
+            label: type,
+            value: totalByType[type],
+            onPortionClick: function(ev){
+                var type = ev.label;
+                var rect = ev.rect;
+                
+                console.log('click', type, rect, rows)
+                
+                if(budgetCategories2)
+                    budgetCategories2.remove();
+                
+                var by1Nom = _.groupBy(
+                    rows, 
+                    r => r['1 nom']
+                );
+                var totalBy1Nom = Object.create(null);
 
-    svgElem.appendChild(completeBudget);
-    
-    var nextXShift = 20;
-    
-    byType.forEach(function(rows, type){
-        var typeTotal = totalByType.get(type);
+                Object.keys(by1Nom).forEach(function(k){
+                    var val = by1Nom[k]
+                    totalBy1Nom[k] = val.reduce(function(acc, curr){ return acc + curr['montant']}, 0)
+                })
+                
+                budgetCategories2 = makeStackBar([...Object.entries(by1Nom)].map(([_1Nom, rows]) => {
+                    return {
+                        label: _1Nom,
+                        value: totalBy1Nom[_1Nom],
+                        onPortionClick: function(ev){
+                            var _1Nom = ev.label;
+                            var rect = ev.rect;
 
-        var portionWidth = width*typeTotal/total;
-        
-        var portion = document.createElementNS(svgxmlns, "g");
-        portion.classList.add('portion');
-        
-        var rect = document.createElementNS(svgxmlns, "rect");
-        rect.setAttribute('x', 0);
-        rect.setAttribute('y', 0);
-        rect.setAttribute('height', 70);
-        rect.setAttribute('width', portionWidth);
-        
-        var text = document.createElementNS(svgxmlns, "text");
-        text.textContent = type;
-        text.setAttribute('dy', 35);
-        text.setAttribute('dx', portionWidth/2);
-        
-        portion.setAttribute('transform', 'translate('+nextXShift+')')
-        
-        portion.appendChild(rect);
-        portion.appendChild(text);
-        
-        portion.addEventListener('click', function(){
-            console.log('portion', type, rows)
-        });
-        
-        svgElem.appendChild(portion);
-        
-        nextXShift += portionWidth;
-        
-    })
+                            console.log('click', _1Nom, rect, rows)
+                        }
+                    }
+                }), {width: width, height: height, title: type})
+                
+                budgetCategories2.setAttribute('transform', 'translate(0, '+2*height+')')
+                
+                svgElem.appendChild(budgetCategories2)
+            }
+        }
+    }), {width: width, height: height, title: 'Budget complet'})
     
+    var budgetCategories2;
+    var budgetCategories3;
+    var budgetCategories4;
     
-
+    svgElem.appendChild(budgetCategories1)
+    
 
     main.appendChild(svgElem);
 })

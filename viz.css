@@ -31,9 +31,12 @@ main{
 }
 
 .budget-nav > rect,
-.budget-nav .portion rect
+.budget-nav .stack-bar .portion rect
 {
     stroke-width: 2px;
     stroke: burlywood; 
 }
 
+.stack-bar .zooming-trapezoid{
+    fill: burlywood;
+}
