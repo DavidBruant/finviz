@@ -13,3 +13,7 @@
     padding: 0.8em;
     margin: 0;
 }
+
+.years button.selected{
+    border: 2px solid hsl(34, 57%, 44%);
+}
