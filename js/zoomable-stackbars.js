@@ -24,7 +24,9 @@ function makeRecursiveStackBarWithData({data, groupFunction, title, next}, conta
     
     var nextStackBar;
     var g = document.createElementNS(svgxmlns, "g");
-    var stackBar = makeStackBar([...Object.entries(byGroup)].map(([group, rows]) => {
+    var stackBar = makeStackBar(Object.keys(byGroup)
+                                .map(k => [k, byGroup[k]]) // Object.entries
+                                .map(([group, rows]) => {
         console.log('group, rows', group, rows)
         
         return {
