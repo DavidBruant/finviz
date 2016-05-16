@@ -4,27 +4,9 @@ var readyP = new Promise(function(resolve, reject){
     document.addEventListener('DOMContentLoaded', resolve);
 });
 
-var primitifP = fetch("./budgets-primitifs-2009-2016.csv")
-.then(resp => resp.text())
-.then(d3.csv.parse)
-.catch(err => console.error('err', err))
+var URL = "./budgets-primitifs-2009-2016.csv";
 
-var primitifByYearP = primitifP
-.then(function(prim){
-    // mutation
-    prim.forEach(function(row){
-        row["année"] = Number(row["année"])
-        row["montant"] = Number(row["montant"])
-        Object.freeze(row);
-    });
-    return prim;
-})
-.then(function(prim){
-    console.log('prim', prim)
-
-    return _.groupBy(prim, r => r["année"]);
-})
-//.then(data => console.log('data byYear', data))
+var primitifByYearP = fetchAndPrepareBudgetPrimitif(URL)
 .catch(err => console.error('err', err))
 
 var WIDTH = 700;
@@ -77,22 +59,15 @@ function makeRecursiveStackBarWithData({data, groupFunction, title, next}, conta
 
 primitifByYearP
 .then(function(byYear){
-    var yearsDiv = document.body.querySelector('.years');
     var main = document.body.querySelector('main');
 
     // draw year buttons
-    Object.keys(byYear).forEach(function(key){
-        var value = byYear[key];
-        var b = document.createElement('button');
-        b.textContent = key;
-
-        b.addEventListener('click', function(e){
-            main.textContent = JSON.stringify(value);
-        })
-
-        yearsDiv.appendChild(b);
+    var yearSelector = makeYearSelector(Object.keys(byYear), function(year){
+        console.log('selected year', year, 'TODO');
     });
-
+    
+    document.body.insertBefore(yearSelector, main);
+    
     // pick a year
     var year = 2010;
 
