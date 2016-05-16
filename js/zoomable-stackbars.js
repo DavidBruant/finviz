@@ -60,45 +60,42 @@ function makeRecursiveStackBarWithData({data, groupFunction, title, next}, conta
 primitifByYearP
 .then(function(byYear){
     var main = document.body.querySelector('main');
-
-    // draw year buttons
-    var yearSelector = makeYearSelector(Object.keys(byYear), function(year){
-        console.log('selected year', year, 'TODO');
-    });
-    
-    document.body.insertBefore(yearSelector, main);
-    
-    // pick a year
-    var year = 2010;
-
-    var yearRows = byYear[year];
-
     var svgElem = document.createElementNS(svgxmlns, "svg");
     svgElem.setAttribute('width', 1000);
     svgElem.setAttribute('height', 700);
     svgElem.classList.add('budget-nav');
-
-    var budgetCategories1 = makeRecursiveStackBarWithData(
-        {
-            data: yearRows,
-            title: 'Budget complet',
-            groupFunction: r => r['Fonctionnement ou Investissement'] + r['Recette ou dépense'],
-            next: {
-                groupFunction: r => r['1 nom'],
-                next: {
-                    groupFunction: r => r['2 sous catégories'],
+    
+    // draw year buttons
+    var yearSelector = makeYearSelector(Object.keys(byYear), function(year){
+        console.log('selected year', year);
+        
+        var yearRows = byYear[year];
+        svgElem.innerHTML = '';
+        if(year){
+            var budgetCategories1 = makeRecursiveStackBarWithData(
+                {
+                    data: yearRows,
+                    title: 'Budget complet',
+                    groupFunction: r => r['Fonctionnement ou Investissement'] + r['Recette ou dépense'],
                     next: {
-                        groupFunction: r => r['3 sous sous catégorie']
+                        groupFunction: r => r['1 nom'],
+                        next: {
+                            groupFunction: r => r['2 sous catégories'],
+                            next: {
+                                groupFunction: r => r['3 sous sous catégorie']
+                            }
+                        }
                     }
-                }
-            }
-        }, 
-        svgElem
-    );
-    
-    svgElem.appendChild(budgetCategories1)
-    
+                }, 
+                svgElem
+            );
 
+            svgElem.appendChild(budgetCategories1);
+        }
+    });
+    
+    document.body.insertBefore(yearSelector, main);
+        
     main.appendChild(svgElem);
 })
             
