@@ -14,7 +14,6 @@ var primitifByYearP = fetchAndPrepareBudgetPrimitif(URL)
     From csv data to the data the viz consumes
 */
 
-
 var WIDTH = 700;
 var SVGXMLNS = "http://www.w3.org/2000/svg";
 
@@ -39,7 +38,7 @@ primitifByYearP
     document.body.insertBefore(yearSelector, main);
     
     
-    makeSunburst(
+    makeCirclePacking(
         csvBudgetPrimitifToHierarchicalData(byYear[YEAR]),
         main
     )
