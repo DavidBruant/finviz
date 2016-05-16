@@ -7,7 +7,7 @@
         container.innerHTML = '';
         
         var margin = 20,
-            diameter = 960;
+            diameter = 700;
 
         var color = d3.scale.linear()
             .domain([-1, 5])
@@ -21,7 +21,7 @@
                 return d.size;
             })
 
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select(container).append("svg")
             .attr("width", diameter)
             .attr("height", diameter)
             .append("g")
@@ -60,7 +60,7 @@
 
         var node = svg.selectAll("circle,text");
 
-        d3.select("body")
+        d3.select(container)
             .style("background", color(-1))
             .on("click", function () {
                 zoom(data);
