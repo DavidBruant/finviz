@@ -2,18 +2,18 @@
 
 (function(global){
 
-    global.csvBudgetPrimitifToHierarchicalData = function prepareData(rows) {
+    global.csvM52BudgetToHierarchicalData = function prepareData(rows) {
         var root = {
             "name": "root",
             "children": []
         };
         rows.forEach(function(r){
-            var size = r["montant"];
+            var size = r["Montant"];
             var parts = [
-                r['Recette ou dépense'] + r['Fonctionnement ou Investissement'],
-                r['1 nom'],
-                r['2 sous catégories'],
-                r['3 sous sous catégorie']
+                r['Dépense/Recette'] + r['Investissement/Fonctionnement'],
+                r['Chapitre'].trim(),
+                r['Article'].trim(),
+                r['Libellé'] || r['Rubrique fonctionnelle'],
             ].filter(v => v);
 
             var currentNode = root;

@@ -11,20 +11,24 @@
     global.makeSunburst = function(data, container) {
         // empty
         container.innerHTML = 
-            '<div id="sequence"></div>' +
-            '<div id="chart">' +
-                '<div id="explanation" style="visibility: hidden;">' +
-                    '<span id="percentage"></span><br/>' +
-                    '<span id="label"></span>' +
+            '<div class="sequence"></div>' +
+            '<div class="chart">' +
+                '<div class="explanation" style="visibility: hidden;">' +
+                    '<span class="percentage"></span><br/>' +
+                    '<span class="label"></span>' +
                 '</div>'
         ;
         
         
         
         // Dimensions of sunburst.
-        var width = 1200;
+        var width = 700;
         var height = 600;
         var radius = Math.min(width, height) / 2;
+        
+        d3.select( container.querySelector('.explanation') )
+            .style('top', (height/2 - 40) + 'px')
+            .style('left', (width/2 - 70) + 'px')
 
         // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
         var b = {
@@ -47,11 +51,11 @@
         // Total size of all segments; we set this later, after loading the data.
         var totalSize = 0;
 
-        var vis = d3.select(container.querySelector('#chart')).append("svg:svg")
+        var vis = d3.select(container.querySelector('.chart')).append("svg:svg")
             .attr("width", width)
             .attr("height", height)
             .append("svg:g")
-            .attr("id", "container")
+            .attr("class", "container")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
         var partition = d3.layout.partition()
@@ -107,7 +111,7 @@
                 .on("mouseover", mouseover);
 
             // Add the mouseleave handler to the bounding circle.
-            d3.select("#container").on("mouseleave", mouseleave);
+            d3.select( container.querySelector(".container") ).on("mouseleave", mouseleave);
 
             // Get total size of the tree = value of root node from partition.
             totalSize = nodes[0].value;
@@ -122,13 +126,13 @@
                 percentageString = "< 0.1%";
             }
 
-            d3.select("#percentage")
+            d3.select( container.querySelector(".percentage") )
                 .text(percentageString);
             
-            d3.select("#label")
+            d3.select( container.querySelector(".label") )
                 .text(d.name);
 
-            d3.select("#explanation")
+            d3.select( container.querySelector(".explanation") )
                 .style("visibility", "");
 
             var sequenceArray = getAncestors(d);
@@ -150,7 +154,7 @@
         function mouseleave(d) {
 
             // Hide the breadcrumb trail
-            d3.select("#trail")
+            d3.select( container.querySelector(".trail") )
                 .style("visibility", "hidden");
 
             // Deactivate all segments during transition.
@@ -165,7 +169,7 @@
                     d3.select(this).on("mouseover", mouseover);
                 });
 
-            d3.select("#explanation")
+            d3.select( container.querySelector(".explanation") )
                 .style("visibility", "hidden");
         }
 
@@ -183,13 +187,13 @@
 
         function initializeBreadcrumbTrail() {
             // Add the svg area.
-            var trail = d3.select("#sequence").append("svg:svg")
+            var trail = d3.select( container.querySelector(".sequence") ).append("svg:svg")
                 .attr("width", width)
                 .attr("height", 50)
-                .attr("id", "trail");
+                .attr("class", "trail");
             // Add the label at the end, for the percentage.
             trail.append("svg:text")
-                .attr("id", "endlabel")
+                .attr("class", "endlabel")
                 .style("fill", "#000");
         }
 
@@ -211,7 +215,7 @@
         function updateBreadcrumbs(nodeArray, percentageString) {
 
             // Data join; key function combines name and depth (= position in sequence).
-            var g = d3.select("#trail")
+            var g = d3.select( container.querySelector(".trail") )
                 .selectAll("g")
                 .data(nodeArray, function (d) {
                     return d.name + d.depth;
@@ -244,7 +248,7 @@
             g.exit().remove();
 
             // Now move and update the percentage at the end.
-            d3.select("#trail").select("#endlabel")
+            d3.select( container.querySelector(".trail .endlabel") )
                 .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
                 .attr("y", b.h / 2)
                 .attr("dy", "0.35em")
@@ -252,7 +256,7 @@
                 .text(percentageString);
 
             // Make the breadcrumb trail visible, if it's hidden.
-            d3.select("#trail")
+            d3.select( container.querySelector(".trail") )
                 .style("visibility", "");
 
         }
