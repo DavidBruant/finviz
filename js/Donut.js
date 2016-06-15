@@ -2,10 +2,6 @@
 
 // Redoing http://bl.ocks.org/mbostock/3887193
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var d3Shape = require('d3-shape');
-
 /*
 
 interface RecursiveData{
@@ -18,7 +14,10 @@ interface DonutProps{
     endAngle: number
     opacity: number
     innerRadius: number
-    donutWidth: number
+    donutWidth: number,
+    width,
+    height,
+    show: true|false|"ghost"
 }
 
 interface DonutState{
@@ -27,54 +26,55 @@ interface DonutState{
 
 */
 
-const pie = 
-const arc = d3Shape.arc();
+const arc = d3.arc();
 
 function computePieValues(recData){
     return Object.keys(recData).map(label => {
         const value = recData[label];
-        
         return typeof value === "number" ?
             value :
-            computePieValues(value).reduce((acc, curr) => acc + curr);
+            computePieValues(value).reduce((acc, curr) => {return acc + curr}, 0);
     })
 }
 
 
-module.exports = React.createClass({
+
+
+var Donut = React.createClass({
     displayName: 'Donut',
     
     render: function(){
         const {props, state} = this;
-        const {data, startAngle, endAngle, innerRadius, donutWidth} = props;
+        const {data, startAngle, endAngle, innerRadius, donutWidth, width, height, show} = props;
         
-        var width = props.width;
-        var height = props.height;
+        //console.log('props', props)
         
         const pieValues = computePieValues(data);
-        const pie = d3Shape.pie()
+        //console.log('d', data);
+        
+        const pie = d3.pie()
             .startAngle(startAngle)
             .endAngle(endAngle)
         
-        var arcDescs = Object.assign(
-            pie(pieValues),
+        var arcDescs = pie(pieValues).map(p => Object.assign(
+            p,
             {
-                innerRadius: props.innerRadius,
-                outerRadius: radius
+                innerRadius: innerRadius,
+                outerRadius: innerRadius + donutWidth
             }
-        );
+        ));
         
         // React.createElement('svg', {width: width, height: height}, ...  )
         
         return React.createElement(
             'g',
-            {
-                transform: 'translate('+width/2+','+height/2+')'
-            },
+            {className: 'Donut'},
             Object.keys(data).map((label, i) => {
                 const value = data[label];
                 const arcDesc = arcDescs[i];
 
+                //console.log('arcDesc', label, arcDesc);
+                
                 return React.createElement(
                     'g',
                     {
@@ -82,20 +82,27 @@ module.exports = React.createClass({
                         key: i,
                         onMouseOver: e => {
                             console.log('over', e);
-                        }
+                        },
+                        opacity: show === "ghost" ? 0.4 : (show ? 1 : 0)
                     },
                     React.createElement('path', {
                         d: arc(arcDesc), 
                         fill: 'hsl('+Math.random()*360+', 50%, 37%)'
                     }),
-                    Object(value) === value ?
-                        React.createElement(Donut, {
-                            data : value, 
-                            startAngle: arcDesc.startAngle, 
-                            endAngle: arcDesc.endAngle, 
-                            innerRadius: innerRadius + donutWidth, 
-                            donutWidth: donutWidth
-                        })
+                    // if this one is shown, show the next as a ghost donut
+                    show === true ?
+                        (Object(value) === value ?
+                            React.createElement(Donut, {
+                                data : value, 
+                                startAngle: arcDesc.startAngle, 
+                                endAngle: arcDesc.endAngle, 
+                                innerRadius: innerRadius + donutWidth, 
+                                donutWidth, width, height,
+                                show: "ghost"
+                            }) :
+                            value
+                        ) :
+                        undefined
                 )
             })      
         );
