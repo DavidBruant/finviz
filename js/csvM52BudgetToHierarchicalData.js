@@ -9,11 +9,13 @@
         };
         rows.forEach(function(r){
             var size = r["Montant"];
+            var R/*ubrique fonctionnelle*/ = r['Rubrique fonctionnelle'];
+            
             var parts = [
-                r['Dépense/Recette'],
-                r['Investissement/Fonctionnement'],
-                r['Rubrique fonctionnelle'],
-                r['Article'].trim()
+                R[1],
+                R[2] ? R[1]+R[2] : undefined,
+                R[3] ? R[1]+R[2]+R[3] : undefined,
+                R[4] ? R[1]+R[2]+R[3]+R[4] : undefined
             ].filter(v => v);
 
             var currentNode = root;

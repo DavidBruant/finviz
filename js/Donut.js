@@ -83,7 +83,7 @@ var Donut = React.createClass({
                         onMouseOver: e => {
                             console.log('over', e);
                         },
-                        opacity: show === "ghost" ? 0.4 : (show ? 1 : 0)
+                        opacity: show === "ghost" ? 0.3 : (show ? 1 : 0)
                     },
                     React.createElement('path', {
                         d: arc(arcDesc), 
