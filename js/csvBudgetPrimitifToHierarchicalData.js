@@ -10,7 +10,8 @@
         rows.forEach(function(r){
             var size = r["montant"];
             var parts = [
-                r['Recette ou dépense'] + r['Fonctionnement ou Investissement'],
+                r['Recette ou dépense'],
+                r['Fonctionnement ou Investissement'],
                 r['1 nom'],
                 r['2 sous catégories'],
                 r['3 sous sous catégorie']

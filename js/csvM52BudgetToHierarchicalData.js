@@ -10,10 +10,10 @@
         rows.forEach(function(r){
             var size = r["Montant"];
             var parts = [
-                r['Dépense/Recette'] + r['Investissement/Fonctionnement'],
-                r['Chapitre'].trim(),
-                r['Article'].trim(),
-                r['Libellé'] || r['Rubrique fonctionnelle'],
+                r['Dépense/Recette'],
+                r['Investissement/Fonctionnement'],
+                r['Rubrique fonctionnelle'],
+                r['Article'].trim()
             ].filter(v => v);
 
             var currentNode = root;

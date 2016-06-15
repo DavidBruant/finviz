@@ -24,9 +24,11 @@
                 if(row["Année"])
                     row["Exercice"] = Number(row["Année"]);
                 
+                row["Article"] = row["Article"].trim()
+                row["Rubrique fonctionnelle"] = row["Rubrique fonctionnelle"].trim()
+                
                 Object.freeze(row);
             });
-            console.log('prim', prim);
             
             return prim.filter(r => r["Exercice"] >= 2015);
         })
