@@ -32,34 +32,91 @@ multiDonutContainer.innerHTML = '<svg width="'+width+'" height="'+height+'">'+
 main.appendChild(multiDonutContainer);
 
 
-function d3DataHierarchyFormatToGrouped(d3Data){
-    /*
-        Object is either {name, children} or {name, size}
-    */
+function FonctionGroupedM52BudgetData(m52Rows){
+    //var R/*ubrique fonctionnelle*/ = r['Rubrique fonctionnelle'];
+    /*[
+        R[1],
+        R[2] ? R[1]+R[2] : undefined,
+        R[3] ? R[1]+R[2]+R[3] : undefined,
+        R[4] ? R[1]+R[2]+R[3]+R[4] : undefined
+    ].filter(v => v);*/
+    
+    const res = _.groupBy(m52Rows, r => r['Rubrique fonctionnelle'][1]);
+    
+    Object.keys(res).forEach(key => {
+        const val = res[key];
+        
+        const grouped1 = _.groupBy(val, r =>
+            r['Rubrique fonctionnelle'][2] ?
+                r['Rubrique fonctionnelle'][1]+r['Rubrique fonctionnelle'][2] : 
+                ''
+        );
+        
+        const selfValues = grouped1['']; // when r['Rubrique fonctionnelle'][2] === ''
+        delete grouped1[''];
+        // subdivide again
+        Object.keys(grouped1).forEach(key => {
+            const val = grouped1[key];
+
+            const grouped2 = _.groupBy(val, r =>
+                r['Rubrique fonctionnelle'][3] ?
+                    r['Rubrique fonctionnelle'][1]+r['Rubrique fonctionnelle'][2]+r['Rubrique fonctionnelle'][3] :
+                    ''
+            );
+
+            const selfValues = grouped2['']; // when r['Rubrique fonctionnelle'][3] === ''
+            delete grouped2[''];
+            // subdivide again ?
+            if(selfValues)
+                grouped2.selfValues = selfValues;
+            
+            grouped1[key] = grouped2;
+        })
+        
+        if(selfValues)
+            grouped1.selfValues = selfValues;
+        
+        res[key] = grouped1
+    })
+    
+    return res;
+}
+
+function sum(grouped){
     var res = {};
     
-    if(Array.isArray(d3Data.children)){
-        d3Data.children.forEach(obj => {
-            const {name} = obj;
-            res[name] = d3DataHierarchyFormatToGrouped(obj);
-        });
-        return res;
-    }
-    else
-        return d3Data.size;
+    Object.keys(grouped).forEach(key => {
+        const value = grouped[key];
+        
+        if(Array.isArray(value)){ //leaf case
+            res[key] = value.reduce((acc, curr) => {return acc + curr['Montant']}, 0)
+        }
+        else{
+            var selfValue = Array.isArray(value.selfValues) ?
+                value.selfValues.reduce((acc, curr) => {return acc + curr['Montant']}, 0)  :
+                0;
+            delete value.selfValues;
+            
+            res[key] = sum(value);
+            res[key].selfValue = selfValue;
+        }
+    });
+    
+    return res;
 }
 
 
 function renderBudget(budg){
+    const grouped = FonctionGroupedM52BudgetData(budg);
+    const data = sum(grouped)
+    
+    console.log('renderBudget', grouped, data);
+    
     ReactDOM.render(
         React.createElement(
             Donut,
             {
-                data: d3DataHierarchyFormatToGrouped(
-                    csvM52BudgetToHierarchicalData(
-                        budg
-                    )
-                ),
+                data: data,
                 startAngle: 0, 
                 endAngle: 2*Math.PI, 
                 innerRadius: 100, 

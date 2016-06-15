@@ -29,11 +29,17 @@ interface DonutState{
 const arc = d3.arc();
 
 function computePieValues(recData){
+    console.log('recData', recData);
+    
     return Object.keys(recData).map(label => {
         const value = recData[label];
-        return typeof value === "number" ?
+        var res = typeof value === "number" ?
             value :
             computePieValues(value).reduce((acc, curr) => {return acc + curr}, 0);
+        
+        console.log('recData lvr', label, value, res);
+        
+        return res;
     })
 }
 
