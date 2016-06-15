@@ -23,13 +23,35 @@ main.appendChild(makeRDFISelector(rdfi => {
     
 }))
 
+
+var row = document.createElement('div');
+row.style.display = 'flex';
+
+
 const multiDonutContainer = document.createElement('div');
 multiDonutContainer.innerHTML = '<svg width="'+width+'" height="'+height+'">'+
     '<g class="multi-donut-container" transform="translate('+width/2+','+height/2+')"></g>'+
-    '<text transform="translate('+width/2+','+height/2+')"></text>'+
+    '<text transform="translate('+(width/2-50)+','+height/2+')"></text>'+
     '</svg>';
 
-main.appendChild(multiDonutContainer);
+row.appendChild(multiDonutContainer);
+
+
+const descriptionContainer = document.createElement('div');
+descriptionContainer.innerHTML = `
+    <h1>Description</h1>
+    <p></p>
+`;
+
+descriptionContainer.classList.add('description');
+row.appendChild(descriptionContainer);
+
+function displayDescription(text){
+    descriptionContainer.querySelector('p').textContent = text;
+}
+
+
+main.appendChild(row);
 
 
 function FonctionGroupedM52BudgetData(m52Rows){

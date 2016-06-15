@@ -41,6 +41,7 @@ function computePieValues(recData){
 }
 
 
+var interpColor = d3.interpolateHclLong("red", "blue");
 
 
 var Donut = React.createClass({
@@ -99,6 +100,9 @@ var Donut = React.createClass({
                     {
                         className: 'arc', 
                         key: i,
+                        opacity: state.hoveredM52Fonction === value ?
+                            1 :
+                            (show === "ghost" ? 0.3 : (show ? 1 : 0)),
                         onMouseOver: e => {
                             console.log(label +' '+ arcDesc.value)
                             
@@ -111,20 +115,22 @@ var Donut = React.createClass({
                                 ' '+
                                 arcDesc.value
                             )
+                            
+                            displayDescription(dictionnaireDescriptionM52[label] || label)
+                            
                             e.stopPropagation();
                         },
-                        opacity: state.hoveredM52Fonction === value ?
-                            1 :
-                            (show === "ghost" ? 0.3 : (show ? 1 : 0)),
                         onMouseLeave: e => {
                             this.setState({
                                 hoveredM52Fonction: undefined
                             });
+                            
+                            displayDescription('');
                         }
                     },
                     React.createElement('path', {
                         d: arc(arcDesc), 
-                        fill: 'hsl('+70+', 50%, 37%)'
+                        fill: interpColor(Number(label[0])/10)
                     }),
                     // if this one is shown, show the next as a ghost donut
                     show === true || state.hoveredM52Fonction === value ?
