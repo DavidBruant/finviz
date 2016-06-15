@@ -29,15 +29,12 @@ interface DonutState{
 const arc = d3.arc();
 
 function computePieValues(recData){
-    console.log('recData', recData);
     
     return Object.keys(recData).map(label => {
         const value = recData[label];
         var res = typeof value === "number" ?
             value :
             computePieValues(value).reduce((acc, curr) => {return acc + curr}, 0);
-        
-        console.log('recData lvr', label, value, res);
         
         return res;
     })
@@ -49,7 +46,13 @@ function computePieValues(recData){
 var Donut = React.createClass({
     displayName: 'Donut',
     
-    render: function(){
+    getInitialState(){
+        return {
+            hoveredM52Fonction: undefined
+        }
+    },
+    
+    render(){
         const {props, state} = this;
         const {
             data,
@@ -85,6 +88,9 @@ var Donut = React.createClass({
             Object.keys(data).map((label, i) => {
                 const value = data[label];
                 const arcDesc = arcDescs[i];
+                
+                if(label === '__selfValue')
+                    return;
 
                 //console.log('arcDesc', label, arcDesc);
                 
@@ -95,6 +101,11 @@ var Donut = React.createClass({
                         key: i,
                         onMouseOver: e => {
                             console.log(label +' '+ arcDesc.value)
+                            
+                            this.setState({
+                                hoveredM52Fonction: value
+                            });
+                            
                             onFragmentSelected(
                                 (dictionnaireFonctions[label] || label) +
                                 ' '+
@@ -102,14 +113,21 @@ var Donut = React.createClass({
                             )
                             e.stopPropagation();
                         },
-                        opacity: show === "ghost" ? 0.3 : (show ? 1 : 0)
+                        opacity: state.hoveredM52Fonction === value ?
+                            1 :
+                            (show === "ghost" ? 0.3 : (show ? 1 : 0)),
+                        onMouseLeave: e => {
+                            this.setState({
+                                hoveredM52Fonction: undefined
+                            });
+                        }
                     },
                     React.createElement('path', {
                         d: arc(arcDesc), 
-                        fill: 'hsl('+Math.random()*360+', 50%, 37%)'
+                        fill: 'hsl('+70+', 50%, 37%)'
                     }),
                     // if this one is shown, show the next as a ghost donut
-                    show === true ?
+                    show === true || state.hoveredM52Fonction === value ?
                         (Object(value) === value ?
                             React.createElement(Donut, {
                                 data : value, 

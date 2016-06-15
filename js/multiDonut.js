@@ -85,6 +85,9 @@ function FonctionGroupedM52BudgetData(m52Rows){
 function sum(grouped){
     var res = {};
     
+    if(Object.keys(grouped).length === 1 && Object.keys(grouped)[0] === 'selfValue')
+        return grouped.selfValue;
+    
     Object.keys(grouped).forEach(key => {
         const value = grouped[key];
         
@@ -98,7 +101,9 @@ function sum(grouped){
             delete value.selfValues;
             
             res[key] = sum(value);
-            res[key].selfValue = selfValue;
+            res[key].__selfValue = selfValue;
+            
+            console.log('sum', key, res[key])
         }
     });
     
