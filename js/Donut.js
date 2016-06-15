@@ -45,7 +45,14 @@ var Donut = React.createClass({
     
     render: function(){
         const {props, state} = this;
-        const {data, startAngle, endAngle, innerRadius, donutWidth, width, height, show} = props;
+        const {
+            data,
+            startAngle, endAngle,
+            innerRadius, donutWidth,
+            width, height,
+            show,
+            onFragmentSelected
+        } = props;
         
         //console.log('props', props)
         
@@ -81,7 +88,13 @@ var Donut = React.createClass({
                         className: 'arc', 
                         key: i,
                         onMouseOver: e => {
-                            console.log('over', e);
+                            console.log(label +' '+ arcDesc.value)
+                            onFragmentSelected(
+                                (dictionnaireFonctions[label] || label) +
+                                ' '+
+                                arcDesc.value
+                            )
+                            e.stopPropagation();
                         },
                         opacity: show === "ghost" ? 0.3 : (show ? 1 : 0)
                     },
@@ -98,7 +111,8 @@ var Donut = React.createClass({
                                 endAngle: arcDesc.endAngle, 
                                 innerRadius: innerRadius + donutWidth, 
                                 donutWidth, width, height,
-                                show: "ghost"
+                                show: "ghost",
+                                onFragmentSelected
                             }) :
                             value
                         ) :

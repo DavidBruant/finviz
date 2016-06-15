@@ -8,7 +8,7 @@ var m52P = fetchAndPrepareM52Budget(M52_URL);
     From csv data to the data the viz consumes
 */
 var width = 1000;
-var height = 700;
+var height = 600;
 
 const main = document.body.querySelector('main');
 main.appendChild(makeRDFISelector(rdfi => {
@@ -26,6 +26,7 @@ main.appendChild(makeRDFISelector(rdfi => {
 const multiDonutContainer = document.createElement('div');
 multiDonutContainer.innerHTML = '<svg width="'+width+'" height="'+height+'">'+
     '<g class="multi-donut-container" transform="translate('+width/2+','+height/2+')"></g>'+
+    '<text transform="translate('+width/2+','+height/2+')"></text>'+
     '</svg>';
 
 main.appendChild(multiDonutContainer);
@@ -64,7 +65,8 @@ function renderBudget(budg){
                 innerRadius: 100, 
                 donutWidth: 50,
                 width, height,
-                show: true
+                show: true,
+                onFragmentSelected: text => multiDonutContainer.querySelector('text').textContent = text
             }
         ),
         main.querySelector('.multi-donut-container')
